@@ -546,6 +546,16 @@ window.onscroll = function () {
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
+
+
+
+   window.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('img').forEach(function(img) {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+    });
+  });
 </script>
 </body>
 </html>
