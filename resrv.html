@@ -616,23 +616,18 @@ padding: 5px 0;
         padding: 0 10px;
         box-sizing: border-box;
         text-align: center;
-        white-space: nowrap; /* Empêche le retour à la ligne */
-        overflow: hidden; /* Si le texte dépasse, il sera caché */
-        text-overflow: ellipsis; /* Affiche '...' si le texte déborde */
     }
 
     .black-section h2,
     .black-section p {
-        width: 100%; /* Change la largeur à 100% pour éviter de couper le texte */
+        width: 70%;
         line-height: 1.5;
-        word-break: break-word;
-        font-size: 1.8em; /* Différencie pour h2 et p si besoin */
+        word-wrap: break-word; /* Permet de déplacer le mot sans le couper */
+        white-space: normal;  /* Assure que le texte peut revenir à la ligne si nécessaire */
+        font-size: 1.8em; /* Tu peux différencier pour p si besoin */
         padding: 0 5px;
         text-align: center;
-        margin: 0 auto;
-        white-space: nowrap; /* Empêche le retour à la ligne */
-        overflow: hidden; /* Cache tout texte qui dépasse */
-        text-overflow: ellipsis; /* Affiche '...' si le texte déborde */
+        margin: 0 auto; /* si tu veux que le bloc soit bien centré aussi */
     }
 
     .black-section p {
@@ -640,7 +635,6 @@ padding: 5px 0;
         line-height: 1.4;
     }
 }
-
 
 
     @media (max-width: 600px) {
