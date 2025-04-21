@@ -491,7 +491,7 @@ height: auto;
   .footer {
     background-color: black;  
     color: white;  /* Texte en noir */
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
     padding: 50px; /* Moins de padding pour que ça soit plus adapté aux mobiles */
     position: relative;
@@ -499,7 +499,7 @@ height: auto;
 }
 
 .footer-text {
-    font-size: 1.2em;  /* Un peu plus petit pour les textes dans le footer */
+    font-size: 1em;  /* Un peu plus petit pour les textes dans le footer */
     padding: 20px;
 font-color: white;
 }
@@ -610,23 +610,22 @@ padding: 5px 0;
 
 @media (max-width: 600px) {
     .black-section {
-        width: 70%;
-        margin: 60px auto;              /* 'auto' centre horizontalement */
-        padding: 0 10px;
+        width: 100%; /* Utilise toute la largeur de l’écran */
+        padding: 0 15%; /* Crée de l’espace à gauche et à droite */
         box-sizing: border-box;
-        text-align: center;
+        text-align: center; /* Centre le contenu textuel */
+        margin: 60px 0; /* Garde juste une marge verticale */
     }
 
     .black-section h2,
     .black-section p {
-        width: 70%;
+        width: 100%; /* Prend toute la largeur dispo dans le padding */
         line-height: 1.5;
-        word-wrap: break-word; /* Permet de déplacer le mot sans le couper */
-        white-space: normal;  /* Assure que le texte peut revenir à la ligne si nécessaire */
-        font-size: 1.8em; /* Tu peux différencier pour p si besoin */
-        padding: 0 5px;
+        word-wrap: break-word;
+        white-space: normal;
+        font-size: 1.8em;
         text-align: center;
-        margin: 0 auto; /* si tu veux que le bloc soit bien centré aussi */
+        margin: 0 auto;
     }
 
     .black-section p {
@@ -638,12 +637,12 @@ padding: 5px 0;
 
     @media (max-width: 600px) {
     .footer {
-        font-size: 1em;  /* Texte plus petit pour les petits écrans */
+        font-size: 0.5em;  /* Texte plus petit pour les petits écrans */
         padding: 20px;  /* Moins de padding pour éviter un grand espace */
     }
 
     .footer-text {
-        font-size: 1em;  /* Encore plus petit pour s’adapter aux petits écrans */
+        font-size: 0.5em;  /* Encore plus petit pour s’adapter aux petits écrans */
     }
 }
 
@@ -653,43 +652,36 @@ padding: 5px 0;
 
 
     @media (max-width: 600px) {
-    .reservation-container form {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .reservation-container form label,
-    .reservation-container form input,
-    .reservation-container form textarea,
-    .reservation-container form button {
+    .reservation-container form input[type="text"],
+    .reservation-container form input[type="tel"],
+    .reservation-container form input[type="email"],
+    .reservation-container form input[type="date"],
+    .reservation-container form input[type="time"],
+    .reservation-container form input[type="number"],
+    .reservation-container form textarea {
         display: block;
         width: 100%;
         box-sizing: border-box;
-        margin-bottom: 15px;
-        text-align: left;
-    }
-
-    .reservation-container form label {
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .reservation-container form input,
-    .reservation-container form textarea {
         padding: 10px;
         font-size: 1em;
         border-radius: 5px;
         border: 1px solid #ccc;
+        margin-bottom: 15px;
     }
 
-    .reservation-container form button {
-        background-color: #000;
+
+
+
+
+         .reservation-container form button {
+        background-color: #ccc;
         color: #fff;
         border: none;
         padding: 12px;
         font-size: 1em;
         cursor: pointer;
         border-radius: 5px;
+             align-items : center;
     }
 
     .reservation-container h1 {
@@ -698,6 +690,7 @@ padding: 5px 0;
         margin-bottom: 20px;
     }
 }
+
     </style>
 </head>
 <body>
