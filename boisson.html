@@ -419,5 +419,16 @@ window.onscroll = function () {
     navLinks.classList.toggle("active");
   });
 </script>
+
+
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('img').forEach(img => {
+      img.setAttribute('loading', 'lazy');
+    });
+  });
+</script>
 </body>
 </html>
