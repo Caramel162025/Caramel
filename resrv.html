@@ -519,17 +519,7 @@ font-color: white;
     color: #555;  /* Ajout d'une couleur au survol */
 }
 
-/* Responsive pour petits écrans */
-@media (max-width: 600px) {
-    .footer {
-        font-size: 1.2em;  /* Texte plus petit pour les petits écrans */
-        padding: 20px;  /* Moins de padding pour éviter un grand espace */
-    }
 
-    .footer-text {
-        font-size: 1em;  /* Encore plus petit pour s’adapter aux petits écrans */
-    }
-}
 
 
 
@@ -584,8 +574,8 @@ padding: 5px 0;
 
 @media (max-width: 600px) {
     .content h1 {
-        width: 90%;
-        margin-top: 20px; /* ↓ Réduit pour glisser vers le haut */
+        width: 80%;
+        margin-top: 0px; /* ↓ Réduit pour glisser vers le haut */
         font-size: 1.8em;
         padding: 0 15px;
         word-break: normal;
@@ -594,9 +584,9 @@ padding: 5px 0;
     }
 
     .content p {
-        width: 90%;
+        width: 80%;
         font-size: 1.2em;
-        padding: 0 15px;
+        padding: 0 10px;
         line-height: 1.5;
         margin-top: 10px; /* Facultatif : pour espacer du h1 */
     }
@@ -612,6 +602,7 @@ padding: 5px 0;
         width: 80%;
         padding: 0 10px;
         box-sizing: border-box;
+        margin-top: 0px;
     }
 }
 
@@ -620,23 +611,28 @@ padding: 5px 0;
 
 @media (max-width: 600px) {
     .black-section {
-        width: 80%;
+        width: 70%;
         margin: 60px auto;              /* 'auto' centre horizontalement */
         padding: 0 10px;
         box-sizing: border-box;
         text-align: center;
+        white-space: nowrap; /* Empêche le retour à la ligne */
+        overflow: hidden; /* Si le texte dépasse, il sera caché */
+        text-overflow: ellipsis; /* Affiche '...' si le texte déborde */
     }
 
     .black-section h2,
     .black-section p {
-        width: 80%;
+        width: 100%; /* Change la largeur à 100% pour éviter de couper le texte */
         line-height: 1.5;
         word-break: break-word;
-        white-space: normal;
-        font-size: 1.8em; /* tu peux différencier pour p si besoin */
+        font-size: 1.8em; /* Différencie pour h2 et p si besoin */
         padding: 0 5px;
         text-align: center;
-        margin: 0 auto; /* si tu veux que le bloc soit bien centré aussi */
+        margin: 0 auto;
+        white-space: nowrap; /* Empêche le retour à la ligne */
+        overflow: hidden; /* Cache tout texte qui dépasse */
+        text-overflow: ellipsis; /* Affiche '...' si le texte déborde */
     }
 
     .black-section p {
