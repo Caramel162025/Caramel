@@ -613,10 +613,13 @@ font-size: 1.2em;
     }
 
     .tagline {
-        font-size: 1.5em;
-        top: 20%;
-    }
-
+      position: absolute; /* ou fixed selon le besoin */
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  text-align: center;
+ }
     .small-text {
         font-size: 1.5em;
         top: 70%;
