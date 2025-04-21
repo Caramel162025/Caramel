@@ -584,22 +584,23 @@ padding: 5px 0;
 
 @media (max-width: 600px) {
     .content h1 {
-      width: 90%;
-        margin-top: 40px;
-        font-size: 1.8em; /* Réduire la taille pour mobile */
-        padding: 0 15px;  /* Un peu d'espace sur les côtés */
-        word-break: normal; /* Empêche la coupure bizarre des mots */
-        white-space: normal; /* Pour que le texte s’adapte bien */
-        line-height: 1.4; /* Espacement vertical agréable */
+        width: 90%;
+        margin-top: 20px; /* ↓ Réduit pour glisser vers le haut */
+        font-size: 1.8em;
+        padding: 0 15px;
+        word-break: normal;
+        white-space: normal;
+        line-height: 1.4;
     }
 
     .content p {
-        
-         width: 90%;
+        width: 90%;
         font-size: 1.2em;
         padding: 0 15px;
         line-height: 1.5;
+        margin-top: 10px; /* Facultatif : pour espacer du h1 */
     }
+
 
     .btn {
         font-size: 1em;
@@ -617,35 +618,43 @@ padding: 5px 0;
 
 
 
-
 @media (max-width: 600px) {
     .black-section {
-          width: 90%;
-        margin: 60px;                    /* Pas de marge extérieure */
-        padding: 0 10px;              /* Un peu d’espace intérieur */
-        box-sizing: border-box;       /* Gère bien le padding */
-        text-align: center;           /* Centre tout le texte */
+        width: 80%;
+        margin: 60px auto;              /* 'auto' centre horizontalement */
+        padding: 0 10px;
+        box-sizing: border-box;
+        text-align: center;
     }
 
-    .black-section h2 {
-         width: 90%;
+    .black-section h2,
+    .black-section p {
+        width: 80%;
         line-height: 1.5;
         word-break: break-word;
         white-space: normal;
-        font-size: 1.8em;
+        font-size: 1.8em; /* tu peux différencier pour p si besoin */
         padding: 0 5px;
         text-align: center;
+        margin: 0 auto; /* si tu veux que le bloc soit bien centré aussi */
     }
 
     .black-section p {
-         width: 90%;
-
-        line-height: 1.4;
-        word-break: break-word;
-        white-space: normal;
         font-size: 1.2em;
-        padding: 0 5px;
-        text-align: center;
+        line-height: 1.4;
+    }
+}
+
+
+
+    @media (max-width: 600px) {
+    .footer {
+        font-size: 1.2em;  /* Texte plus petit pour les petits écrans */
+        padding: 20px;  /* Moins de padding pour éviter un grand espace */
+    }
+
+    .footer-text {
+        font-size: 1em;  /* Encore plus petit pour s’adapter aux petits écrans */
     }
 }
     </style>
