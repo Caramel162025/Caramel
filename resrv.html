@@ -488,38 +488,6 @@ height: auto;
 
 
 
-  .footer {
-    background-color: black;  
-    color: white;  /* Texte en noir */
-    font-size: 1em;
-    text-align: center;
-    padding: 50px; /* Moins de padding pour que ça soit plus adapté aux mobiles */
-    position: relative;
- 
-}
-
-.footer-text {
-    font-size: 1.5em;  /* Un peu plus petit pour les textes dans le footer */
-    padding: 20px;
-font-color: white;
-}
-
-.footer p {
-    margin: 5px 0;
-    font-weight: lighter;
-}
-
-/* Enlever la couleur bleue du numéro de téléphone */
-.footer a {
-     font-size: 1.2em;
-    color: white;  /* Assurer que le lien est noir et pas bleu */
-    text-decoration: none;  /* Enlever le soulignement des liens */
-}
-
-.footer a:hover {
-    color: #555;  /* Ajout d'une couleur au survol */
-}
-
 
 
 
@@ -636,16 +604,7 @@ padding: 5px 0;
 }
 
 
-    @media (max-width: 600px) {
-    .footer {
-        font-size: 0.5em;  /* Texte plus petit pour les petits écrans */
-        padding: 20px;  /* Moins de padding pour éviter un grand espace */
-    }
-
-    .footer-text {
-        font-size: 0.5em;  /* Encore plus petit pour s’adapter aux petits écrans */
-    }
-}
+ 
 
 
 
@@ -697,6 +656,54 @@ padding: 5px 0;
         margin-bottom: 20px;
     }
 }
+
+
+
+
+
+      .footer {
+    background-color: black;  
+    color: white;  /* Texte en noir */
+    font-size: 1.5em;
+    text-align: center;
+    padding: 50px; /* Moins de padding pour que ça soit plus adapté aux mobiles */
+    position: relative;
+ 
+}
+
+.footer-text {
+    font-size: 1.2em;  /* Un peu plus petit pour les textes dans le footer */
+    padding: 20px;
+font-color: white;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-weight: lighter;
+}
+
+/* Enlever la couleur bleue du numéro de téléphone */
+.footer a {
+    color: white;  /* Assurer que le lien est noir et pas bleu */
+    text-decoration: none;  /* Enlever le soulignement des liens */
+}
+
+.footer a:hover {
+    color: #555;  /* Ajout d'une couleur au survol */
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 600px) {
+    .footer {
+        font-size: 1.2em;  /* Texte plus petit pour les petits écrans */
+        padding: 20px;  /* Moins de padding pour éviter un grand espace */
+    }
+
+    .footer-text {
+        font-size: 1em;  /* Encore plus petit pour s’adapter aux petits écrans */
+    }
+}
+
 
     </style>
 </head>
@@ -765,11 +772,11 @@ padding: 5px 0;
                 <input type="tel" id="telephone" name="telephone" required>
 
 
-                <label for="date" class="required">Date de Réservation</label>
-                <input type="date" id="date" name="date" required>
+              <label for="date" class="required">Date de Réservation</label>
+<input type="date" id="date" name="date" required style="width: 100%;">
 
-                <label for="heure" class="required">Heure de Réservation</label>
-                <input type="time" id="heure" name="heure" required>
+<label for="heure" class="required">Heure de Réservation</label>
+<input type="time" id="heure" name="heure" required style="width: 100%;">
 
                 <label for="nombre-personnes" class="required">Nombre de personnes</label>
                 <input type="number" id="nombre-personnes" name="nombre_personnes" required min="1" max="12">
