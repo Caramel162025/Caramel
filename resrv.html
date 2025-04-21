@@ -652,16 +652,25 @@ padding: 5px 0;
 
 
 
-    @media (max-width: 600px) {
+   @media (max-width: 600px) {
+    .form-container-background,
+    .reservation-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .reservation-container form {
+        width: 100%;
+    }
+
     .reservation-container form input[type="text"],
     .reservation-container form input[type="tel"],
-
     .reservation-container form input[type="date"],
     .reservation-container form input[type="time"],
     .reservation-container form input[type="number"],
     .reservation-container form textarea {
         display: block;
-        width: 100%;
+        width: 100%; /* assure la pleine largeur */
         box-sizing: border-box;
         padding: 10px;
         font-size: 1em;
@@ -670,11 +679,7 @@ padding: 5px 0;
         margin-bottom: 15px;
     }
 
-
-
-
-
-         .reservation-container form button {
+    .reservation-container form button {
         background-color: #f5deb3;
         color: black;
         border: none;
@@ -682,7 +687,8 @@ padding: 5px 0;
         font-size: 1em;
         cursor: pointer;
         border-radius: 5px;
-             align-items : center;
+        width: 40%; /* bouton sur toute la largeur aussi */
+        align-items : center;
     }
 
     .reservation-container h1 {
@@ -758,8 +764,6 @@ padding: 5px 0;
                 <label for="telephone" class="required">Numéro de téléphone</label>
                 <input type="tel" id="telephone" name="telephone" required>
 
-                <label for="email">Adresse email</label>
-                <input type="email" id="email" name="email">
 
                 <label for="date" class="required">Date de Réservation</label>
                 <input type="date" id="date" name="date" required>
